@@ -34,7 +34,7 @@ function ConvertDataToArr(data) {
 
 // requests the data from txt.bayern-fahrplan.de
 // and calls methods to apply the data to the table
-setInterval(function() {
+function Get() {
 
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
@@ -71,4 +71,7 @@ setInterval(function() {
         let table = document.querySelector("table");
         generateTable(table, data);
     });
-}, 10000);
+}
+
+Get();
+setInterval(Get(), 10000);
