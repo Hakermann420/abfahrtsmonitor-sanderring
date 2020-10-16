@@ -1,0 +1,111 @@
+body {
+    /*background: linear-gradient(to bottom left, #d4eaf1 0%, #7e2949 100%);
+    background-repeat: no-repeat;*/
+    background-image: url("assets/Logo.jpg");
+    background-size: 300px;
+    background-repeat: repeat;
+    color: rgb(200, 200, 200);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*font: 16px "Source Sans Pro", sans-serif; font-weight: 400;*/
+    
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
+}
+.wrapper {
+    background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.9) 90%);
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: -10px;
+    width: 102%;
+    height: 102%;
+    position: relative;
+}
+.analog {
+    top: -13.5%;
+    position: absolute;
+    margin-left: 66%;
+    align-content: center;
+    text-align: center;
+    width: 33%;
+    height: 100%;
+    left: 0;
+    font-weight: 900;
+    font-size: 140px;
+}
+
+.digital {
+    position: absolute;
+    margin-left: 66%;
+    align-content: center;
+    text-align: center;
+    width: 33%;
+    height: 100%;
+    top: 55%;
+    left: 0;
+    font-weight: 900;
+    font-size: 90px;
+}
+
+
+.header {
+    position: absolute;
+    padding-left: 50px;
+    text-align: left;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    width: 66%;
+    font-size: 80px;
+    font-stretch: ultra-expanded;
+}
+
+.binary {
+    position: absolute;
+    margin-left: 79%;
+    align-content: center;
+    text-align: center;
+    top: 65%;
+    left: 0;
+    font-weight: 900;
+    font-size: 90px;
+}
+
+.subheader {
+    left: 50%;
+    position: absolute;
+    padding-left: 50px;
+    text-align: left;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    width: 66%;
+    font-size: 80px;
+    font-stretch: ultra-expanded;
+
+}
+
+.listcontainer {
+    position: absolute;
+    margin-right: 33%;
+    margin-top: 7.5%;
+    left: 10px;
+    width: 66%;
+    height: 90%;
+}
+
+.listheader {
+    text-align: left;
+    font-size: 50px;
+    text-decoration: underline;
+
+    font-weight: 600;
+}
+
+.listelementgrey {
+    background-color: rgba(150, 150, 150, 0.5);
+    font-size: 40px;
+}
+
+.listelementwhite {
+    font-size: 40px;
+}

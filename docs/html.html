@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3; background-color: #000000">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+window.setInterval(Update, 100);
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+function Update(){
+	var seconds = (new Date().getTime() / 1000) % 60;
+    var secstr = Math.floor(seconds).toString(2);
+    
+    var minutes = (new Date().getTime() / 60000) % 60;
+    var minstr = Math.floor(minutes).toString(2);
+    
+    var hours = (new Date().getTime() / 3600000) % 24+2;
+    var hrstr = Math.floor(hours).toString(2);
+    
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.clearRect(0, 0, c.width, c.height);
+	ctx.fillStyle = getRandomColor();//"#FFFFFF";
+	ctx.beginPath();
+    for(var i = 0; i<secstr.length; i++){
+    	if(secstr[secstr.length - 1 - i] == '1'){
+			ctx.rect(100, 25 + i*25, 25, 25);
+			ctx.fill();
+        }
+    }
+    
+    for(var i = 0; i<minstr.length; i++){
+    	if(minstr[minstr.length - 1 - i] == '1'){
+			ctx.rect(66, 25 + i*25, 25, 25);
+			ctx.fill();
+        }
+    }
+    
+    for(var i = 0; i<hrstr.length; i++){
+    	if(hrstr[hrstr.length - 1 - i] == '1'){
+			ctx.rect(33, 25 + i*25, 25, 25);
+			ctx.fill();
+        }
+    }
+    
+	ctx.stroke();
+}
+</script> 
+
+</body>
+</html>
