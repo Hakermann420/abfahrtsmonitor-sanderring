@@ -56,14 +56,15 @@ function Get() {
         type_dm: 'any',
         deleteAssignedStops: '1',
         mode: 'direct',
-        itdTimeHour: hour,
-        itdTimeMinute: min,
+        //itdTimeHour: hour,
+        //itdTimeMinute: min,
+        itdTime: hour+min,
         itdDate: today,
         name_dm: '3700348' //HaltestelleId von Würzburg Sanderring
     };
 
 
-    var finalUrl = 'https://cors-anywhere.herokuapp.com/' + url;
+    var finalUrl = 'https://michiapi.tk/cors/?url=' + url;
 
     $.post(finalUrl, formData).done(function(data) {
 
