@@ -75,4 +75,4 @@ function Get() {
 }
 
 Get();
-setInterval(Get, 10000);
+setInterval(Get, 60000);
