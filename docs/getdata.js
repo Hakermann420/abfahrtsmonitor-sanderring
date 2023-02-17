@@ -64,7 +64,7 @@ function Get() {
     };
 
 
-    var finalUrl = 'https://michiapi.tk/cors/?url=' + url;
+    var finalUrl = 'https://api.xn--gedns-lua.com/cors/?url=' + url;
 
     $.post(finalUrl, formData).done(function(data) {
 
